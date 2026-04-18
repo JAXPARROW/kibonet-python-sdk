@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kibonet-python-sdk"
+version = "0.1.0"
+description = "Simple, secure Python SDK for the KiboNet SMS Gateway"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Jackson Linus", email = "jacksonlinus95@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Telephony",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Framework :: AsyncIO",
+]
+keywords = ["kibonet", "sms", "tanzania", "africa", "messaging", "httpx", "async"]
+dependencies = [
+    "httpx>=0.24.0",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/JAXPARROW/kibonet-python-sdk"
+Repository = "https://github.com/JAXPARROW/kibonet-python-sdk.git"
+Issues = "https://github.com/JAXPARROW/kibonet-python-sdk/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "respx>=0.20.0",
+    "mypy>=1.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["kibonet_sdk*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
