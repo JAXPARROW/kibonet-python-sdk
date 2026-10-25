@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kibonet-python-sdk"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simple, secure Python SDK for the KiboNet SMS Gateway"
 readme = "README.md"
 license = "MIT"

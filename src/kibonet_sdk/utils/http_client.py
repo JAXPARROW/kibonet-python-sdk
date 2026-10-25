@@ -12,7 +12,7 @@ from ..exceptions import KiboNetConnectionError
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://sms.kibonet.co.tz"
-SDK_VERSION = "0.1.0"
+SDK_VERSION = "0.1.1"
 
 
 class HTTPClient:
